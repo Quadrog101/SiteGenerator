@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Options;
 
 namespace SiteGenerator.Domain.Entities
 {
@@ -7,12 +8,20 @@ namespace SiteGenerator.Domain.Entities
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)] 
-        public string? Id { get; set; }
+        public ObjectId Id { get; set; }
 
-        [BsonElement("Name")]
+        [BsonElement("name")]
         public string Name { get; set; }
+        
+        [BsonElement("type")]
+        public string Type { get; set; }
+        
+        [BsonElement("alias")]
+        public string Alias { get; set; }
 
-        [BsonElement("age")]
-        public string Age { get; set; }
+        [BsonElement("ownerId")]
+        public long OwnerId { get; set; }
+        
+        public BsonDocument Data { get; set; }
     }
 }
