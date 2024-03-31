@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteGenerator.Web", "SiteGenerator\SiteGenerator.Web.csproj", "{97B761A6-6592-41D5-9ADE-7C3573403EF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteGenerator.Domain", "src\SiteGenerator.Domain\SiteGenerator.Domain.csproj", "{653047F3-3D7B-4C32-AD39-FE8157B16B80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteGenerator.Domain", "SiteGenerator.Domain\SiteGenerator.Domain.csproj", "{653047F3-3D7B-4C32-AD39-FE8157B16B80}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteGenerator.Infrastructure", "src\SiteGenerator.Infrastructure\SiteGenerator.Infrastructure.csproj", "{6356FCC7-8220-4DA7-95A2-DCC4970F4725}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteGenerator.Infrastructure", "SiteGenerator.Infrastructure\SiteGenerator.Infrastructure.csproj", "{6356FCC7-8220-4DA7-95A2-DCC4970F4725}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiteGenerator.Web", "src\SiteGenerator.Web\SiteGenerator.Web.csproj", "{2DBCFB8C-C4FC-4FA6-9833-9E3711B8EF09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{97B761A6-6592-41D5-9ADE-7C3573403EF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{97B761A6-6592-41D5-9ADE-7C3573403EF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{97B761A6-6592-41D5-9ADE-7C3573403EF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{97B761A6-6592-41D5-9ADE-7C3573403EF8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{653047F3-3D7B-4C32-AD39-FE8157B16B80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{653047F3-3D7B-4C32-AD39-FE8157B16B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{653047F3-3D7B-4C32-AD39-FE8157B16B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,6 +23,10 @@ Global
 		{6356FCC7-8220-4DA7-95A2-DCC4970F4725}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6356FCC7-8220-4DA7-95A2-DCC4970F4725}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6356FCC7-8220-4DA7-95A2-DCC4970F4725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBCFB8C-C4FC-4FA6-9833-9E3711B8EF09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBCFB8C-C4FC-4FA6-9833-9E3711B8EF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBCFB8C-C4FC-4FA6-9833-9E3711B8EF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBCFB8C-C4FC-4FA6-9833-9E3711B8EF09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
