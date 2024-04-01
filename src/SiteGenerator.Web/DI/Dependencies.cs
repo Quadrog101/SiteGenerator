@@ -30,6 +30,8 @@ public static class Dependencies
         
         services.AddSingleton<IApplicationContext, ApplicationContext>();
         services.AddScoped<IWebsiteService, WebsiteService>();
+        services.AddScoped<INewsService, NewsService>();
+        services.AddCors();
 
         return services;
     }
@@ -41,6 +43,12 @@ public static class Dependencies
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+
+        app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
 
         app.UseHttpsRedirection();
         app.UseAuthorization();

@@ -16,5 +16,9 @@ public class MappingProfile : Profile
         CreateMap<WebsiteModel, WebsiteDetailedResponseModel>();
         CreateMap<CreateWebsiteRequest, CreateWebsiteModel>();
         CreateMap<UpdateWebsiteRequest, UpdateWebsiteModel>();
+
+        CreateMap<News, NewsModel>();
+        CreateMap<NewsModel, NewsResponseModel>();
+        CreateMap<CreateNewsRequest, CreateNewsModel>();
     }
 }

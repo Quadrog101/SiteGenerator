@@ -52,9 +52,9 @@ namespace SiteGenerator.Web.Controllers
         public async Task<ActionResult<string>> Create(CreateWebsiteRequest request, CancellationToken cancellationToken)
         {
             var model = _mapper.Map<CreateWebsiteModel>(request);
-            var id = await _websites.CreateNewSite(model, cancellationToken);
+            var alias = await _websites.CreateNewSite(model, cancellationToken);
 
-            return Created(string.Empty, id);
+            return Created(string.Empty, alias);
         }
         
         /// <summary>

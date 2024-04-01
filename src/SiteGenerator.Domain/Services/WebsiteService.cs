@@ -37,10 +37,10 @@ public class WebsiteService : IWebsiteService
 
     public async Task<string> CreateNewSite(CreateWebsiteModel model, CancellationToken cancellationToken)
     {
-        if (await _context.Websites.AsQueryable().AnyAsync(site => site.OwnerId == 1, cancellationToken: cancellationToken))
-        {
-            throw new BusinessException("Пользователь уже является владельцем сайта");
-        }
+        //if (await _context.Websites.AsQueryable().AnyAsync(site => site.OwnerId == 1, cancellationToken: cancellationToken))
+        //{
+        //    throw new BusinessException("Пользователь уже является владельцем сайта");
+        //}
 
         if (await _context.Websites.AsQueryable().AnyAsync(site => site.Alias == model.Alias, cancellationToken: cancellationToken))
         {
@@ -60,7 +60,7 @@ public class WebsiteService : IWebsiteService
         
         await _context.Websites.InsertOneAsync(website, cancellationToken: cancellationToken);
 
-        return website.Id.ToString();
+        return website.Alias;
     }
 
     public async Task<WebsiteModel> GetWebsiteByAlias(string alias, CancellationToken cancellationToken)

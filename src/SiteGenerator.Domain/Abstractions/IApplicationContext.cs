@@ -6,4 +6,6 @@ namespace SiteGenerator.Domain.Abstractions;
 public interface IApplicationContext
 {
     IMongoCollection<Website> Websites { get; }
+
+    IMongoCollection<News> News { get; }
 }
