@@ -45,5 +45,15 @@ namespace SiteGenerator.Web.Controllers
 
             return Ok(_mapper.Map<NewsResponseModel>(news));
         }
+
+        /// <summary>
+        /// Метод удаления новости
+        /// </summary>
+        [HttpDelete("{alias}/{id}")]
+        public async Task<ActionResult> Delete(string alias, string id, CancellationToken cancellationToken)
+        {
+            await _news.DeleteNewsByAliasAndId(alias, id, cancellationToken);
+            return Ok();
+        }
     }
 }

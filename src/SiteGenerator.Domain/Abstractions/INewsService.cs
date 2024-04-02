@@ -8,5 +8,7 @@ namespace SiteGenerator.Domain.Abstractions
             int pageSize = 5, CancellationToken cancellationToken = default);
 
         Task<NewsModel> CreateNews(CreateNewsModel model, CancellationToken cancellationToken);
+
+        Task DeleteNewsByAliasAndId(string alias, string id, CancellationToken cancellationToken);
     }
 }

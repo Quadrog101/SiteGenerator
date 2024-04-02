@@ -52,5 +52,19 @@ namespace SiteGenerator.Domain.Services
 
             return _mapper.Map<NewsModel>(news);
         }
+
+        public async Task DeleteNewsByAliasAndId(string alias, string id, CancellationToken cancellationToken)
+        {
+            var news = await _context.News.AsQueryable()
+                .Where(x => x.Alias == alias && x.Id.ToString() == id)
+                .FirstOrDefaultAsync(cancellationToken: cancellationToken);
+            if (news == null)
+                throw new EntityNotFoundException("Не удалось найти новость с таким id");
+
+            // if (website.OwnerId != 1)
+            //     throw new BusinessException("Вы не владелец вебсайта");
+
+            await _context.News.DeleteOneAsync(x => x.Id.ToString() == id, cancellationToken);
+        }
     }
 }
